@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(70%-3rem)] max-w-3xl flex justify-between items-center px-4 py-2 rounded-xl z-50
+      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-3rem)] max-w-3xl flex justify-between items-center px-4 py-2 rounded-xl z-50
                  bg-white/20 backdrop-blur-md border border-white/10 shadow-md text-black"
     >
       <Image
