@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-3rem)] max-w-3xl flex justify-between items-center px-4 py-2 rounded-xl z-50
+      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(70%-3rem)] max-w-3xl flex justify-between items-center px-4 py-2 rounded-xl z-50
                  bg-white/20 backdrop-blur-md border border-white/10 shadow-md text-black"
     >
       <Image
@@ -23,14 +23,21 @@ function Navbar() {
         className="rounded-full"
       />
       <div className="space-x-4">
-        <a href="#about" className="text-black hover:text-gray-800">
-          About
+        <a href="#about" className=" relative group transition">
+          <span className="hover:text-blue-700 transition-colors duration-300">About</span>
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#skills" className="text-black hover:text-gray-800">
-          Skills
+        <a href="#skills" className=" relative group transition">
+          <span className="hover:text-blue-700 transition-colors duration-300">skills</span>
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#contact" className="text-black hover:text-gray-800">
-          Contact
+        <a href="#galery"className=" relative group transition">
+          <span className="hover:text-blue-700 transition-colors duration-300">Galeri</span>
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" className=" relative group transition">
+          <span className="hover:text-blue-700 transition-colors duration-300">Contact</span>
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </div>
     </nav>
@@ -39,16 +46,14 @@ function Navbar() {
 
 export default function Home() {
   return (
-      <main className="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center px-6 py-12"
-      style={{ backgroundImage: "url('/bg.jpg')" }}
-        >
+      <main className="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center px-6 py-12">
       {/* Navbar */}
         <Navbar />
 
         {/* HERO WRAPPER - image beside hero (responsive) */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-20 mt-30">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-20 mt-25">
         {/* HERO */}
-        <div className="text-center md:text-left mb-6 md:mb-0 mt-40">
+        <div className="text-center md:text-left mb-6 md:mb-0 mt-35">
         <h1
           className="text-black text-4xl font-bold mb-2 flex items-center justify-center md:justify-start gap-3"
           style={{ textShadow: "0 4px 8px rgba(0,0,0,0.6)" }}
@@ -87,13 +92,16 @@ export default function Home() {
         </div>
 
       {/* ABOUT */}
-      <h2 className="text-2xl font-semibold mb-2">About Me</h2>
+      <section id="about"  className="py-10 text-center"></section>
+      <h2 className="text-3xl font-semibold mb-10 mt-20">About Me</h2>
       <p className="text-yellow-400 text-center max-w-md mb-12">
         Passionate in technology, UI/UX, and education. Currently learning Next.js and building LMS platform.
       </p>
+      
 
       {/* SKILLS */}
-      <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+      <section id="skills"  className="py-10 text-center"></section>
+      <h2 className="text-2xl font-semibold mb-6 mt-20">Skills</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mb-16">
         <div
           className="group bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center gap-2 w-full
@@ -162,9 +170,37 @@ export default function Home() {
         </div>
       </div>
 
-
-      {/* CONTACT */}
-      <h2 className="text-2xl font-semibold mb-3">Contact</h2>
+      {/* Galeri */}
+      <section id="galery"  className="py-10 text-center"></section>
+      <h2 className="text-2xl font-semibold mb-4 mt-20">Galeri</h2>
+      <div aria-label="Galeri foto, geser ke samping" className="w-full mb-10">
+        <div className="flex gap-4 overflow-x-auto px-2 pb-4 snap-x snap-mandatory scrollbar-hide">
+          {[
+        "/foto1.jpg",
+        "/foto4.jpg",
+        "/foto0.jpg",
+        "/foto2.jpg",
+        "/foto3.jpg",
+        "/foto7.jpg",
+          ].map((src, idx) => (
+        <div
+          key={idx}
+          className="snap-center flex-shrink-0 w-64 md:w-80 rounded-xl overflow-hidden bg-white/5 border border-white/10 shadow-sm
+          transition-transform transform hover:-translate-y-2 hover:scale-90 duration-200 hover:shadow-md"
+        >
+          <Image
+            src={src}
+            alt={`Foto ${idx + 1}`}
+            width={320}
+            height={200}
+            className="object-cover w-full h-40 md:h-48"
+          />
+        </div>
+          ))}
+        </div>
+      </div>
+      <section id="contact"  className="py-10 text-center"></section>
+      <h2 className="text-2xl font-semibold mb-3 mt-20">Contact</h2>
       <p className="text-yellow-400 mb-4">Let’s build something together!</p>
 
     {/* Social icons */}
