@@ -177,7 +177,7 @@ export default function Home() {
         <div className="flex gap-4 overflow-x-auto px-2 pb-4 snap-x snap-mandatory scrollbar-hide ">
           {[
         "/1.jpg",
-        "/2.Jpg",
+        "/2.jpg",
         "/3.jpg",
         "/4.jpg",
         "/5.jpg",
