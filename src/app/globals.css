@@ -41,6 +41,20 @@ a {
   scrollbar-width: none; 
   
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
 /* Tambahkan animasi transisi untuk perubahan tema */
 body {
   background-image: url('/bg.jpg'); /* contoh */

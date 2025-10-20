@@ -12,8 +12,8 @@ function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-3rem)] max-w-3xl flex justify-between items-center px-4 py-2 rounded-xl z-50
-                 bg-white/20 backdrop-blur-md border border-white/10 shadow-md text-black"
+      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-6rem)] max-w-2xl flex justify-between items-center px-4 py1 rounded-full z-50
+                 bg-white/20 backdrop-blur-md border border-white/20 shadow-md text-black "
     >
       <Image
         src="/logo.png"
@@ -53,7 +53,7 @@ export default function Home() {
         {/* HERO WRAPPER - image beside hero (responsive) */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-20 mt-25">
         {/* HERO */}
-        <div className="text-center md:text-left mb-6 md:mb-0 mt-35">
+        <div className="text-center md:text-left mb-6 md:mb-0 mt-30">
         <h1
           className="text-black text-4xl font-bold mb-2 flex items-center justify-center md:justify-start gap-3"
           style={{ textShadow: "0 4px 8px rgba(0,0,0,0.6)" }}
@@ -174,14 +174,35 @@ export default function Home() {
       <section id="galery"  className="py-10 text-center"></section>
       <h2 className="text-2xl font-semibold mb-4 mt-20">Galeri</h2>
       <div aria-label="Galeri foto, geser ke samping" className="w-full mb-10">
-        <div className="flex gap-4 overflow-x-auto px-2 pb-4 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex gap-4 overflow-x-auto px-2 pb-4 snap-x snap-mandatory scrollbar-hide ">
           {[
-        "/foto1.jpg",
-        "/foto4.jpg",
-        "/foto0.jpg",
-        "/foto2.jpg",
-        "/foto3.jpg",
-        "/foto7.jpg",
+        "/1.jpg",
+        "/2.Jpg",
+        "/3.jpg",
+        "/4.jpg",
+        "/5.jpg",
+        "/6.jpg",
+        "/7.jpg",
+        "/foto8.jpg",
+        "/9.jpg",
+        "/10.jpg",
+        "/11.jpg",
+        "/12.jpg",
+        "/13.jpg",
+        "/14.jpg",
+        "/15.jpg",
+        "/16.jpg",
+        "/17.jpg",
+        "/18.jpg",
+        "/19.jpg",
+        "/20.jpg",
+        "/21.jpg",
+        "/22.jpg",
+        "/23.jpg",
+        "/24.jpg",
+        "/25.jpg",
+        "/26.jpg",
+        "/27.jpg",
           ].map((src, idx) => (
         <div
           key={idx}
@@ -199,6 +220,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+      
+      {/* CONTACT */}
       <section id="contact"  className="py-10 text-center"></section>
       <h2 className="text-2xl font-semibold mb-3 mt-20">Contact</h2>
       <p className="text-yellow-400 mb-4">Let’s build something together!</p>
@@ -211,6 +234,7 @@ export default function Home() {
         instagram: "https://www.instagram.com/landrep_13/",
         linkedin: "https://www.linkedin.com/in/moh-nurul-lanjib-a28608331/",
         twitter: "https://twitter.com/your-username",
+        whatsapp: "https://wa.me/081335178693",
       };
 
       return (
@@ -225,6 +249,19 @@ export default function Home() {
           >
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-white">
               <path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.93 3.19 9.11 7.62 10.59.56.1.77-.24.77-.54 0-.27-.01-1-.02-1.95-3.1.67-3.76-1.5-3.76-1.5-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1.01 1.72 2.65 1.22 3.3.93.1-.73.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.16-3-.12-.29-.5-1.46.11-3.04 0 0 .95-.31 3.12 1.17a10.8 10.8 0 0 1 2.84-.38c.96 0 1.93.13 2.84.38 2.17-1.48 3.11-1.17 3.11-1.17.62 1.58.24 2.75.12 3.04.72.78 1.16 1.78 1.16 3 0 4.29-2.62 5.24-5.11 5.51.4.34.76 1.02.76 2.06 0 1.49-.01 2.69-.01 3.05 0 .3.2.65.78.54 4.43-1.49 7.62-5.67 7.62-10.59C23.25 5.48 18.27.5 12 .5z" />
+            </svg>
+          </a>
+
+           <a
+            href={social.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="whatsapp"
+            title="whatsapp"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="text-white">
+              <path d="M20.52 3.48A11.82 11.82 0 0 0 12 0a11.93 11.93 0 0 0-10.4 17.9L0 24l6.26-1.64A11.94 11.94 0 0 0 12 24a11.94 11.94 0 0 0 8.52-20.52ZM12 21.82a9.82 9.82 0 0 1-5-1.37l-.36-.22-3.72.97 1-3.63-.23-.37A9.9 9.9 0 0 1 2.18 12a9.83 9.83 0 0 1 9.82-9.82 9.83 9.83 0 0 1 9.82 9.82A9.83 9.83 0 0 1 12 21.82Zm5.48-7.36c-.3-.15-1.77-.88-2.04-.98s-.47-.15-.67.15-.77.98-.95 1.18-.35.22-.65.07a8.02 8.02 0 0 1-2.36-1.45 8.83 8.83 0 0 1-1.63-2.03c-.17-.3 0-.45.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.52s-.67-1.62-.92-2.23c-.24-.58-.48-.5-.67-.5-.17 0-.37-.02-.57-.02s-.52.08-.8.38c-.28.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.07 2.12 3.24 5.15 4.54c.72.3 1.28.47 1.72.6.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.25-.2-.55-.35Z" />
             </svg>
           </a>
 
@@ -253,6 +290,8 @@ export default function Home() {
               <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9h4v12H3zM10 9h3.8v1.6h.1c.5-.9 1.8-1.9 3.7-1.9C21.2 8.7 22 11 22 14.6V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H10z" />
             </svg>
           </a>
+
+          
 
           <a
             href={social.twitter}
