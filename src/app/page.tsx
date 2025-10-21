@@ -7,49 +7,17 @@ import {
   SiNextdotjs,
   SiTailwindcss,
 } from "react-icons/si";
+import Navbar from "./components/Navbar";
 
-function Navbar() {
-  return (
-    <nav
-      aria-label="Main navigation"
-      className=" font-semibold fixed top-6 left-1/2 transform -translate-x-1/2 w-[calc(100%-6rem)] max-w-2xl flex justify-between items-center px-4 py1 rounded-full z-50
-                 bg-white/20 backdrop-blur-md border border-white/20 shadow-md text-black "
-    >
-      <Image
-        src="/logo.png"
-        alt="Logo"
-        width={60}
-        height={60}
-        className="rounded-full"
-      />
-      <div className="space-x-4">
-        <a href="#about" className=" relative group transition">
-          <span className="hover:text-blue-700 transition-colors duration-300">About</span>
-          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#skills" className=" relative group transition">
-          <span className="hover:text-blue-700 transition-colors duration-300">skills</span>
-          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#galery"className=" relative group transition">
-          <span className="hover:text-blue-700 transition-colors duration-300">Galeri</span>
-          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#contact" className=" relative group transition">
-          <span className="hover:text-blue-700 transition-colors duration-300">Contact</span>
-          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      </div>
-    </nav>
-  );
-}
+
 
 export default function Home() {
   return (
       <main className="min-h-screen bg-cover bg-center text-white flex flex-col items-center justify-center px-6 py-12">
-      {/* Navbar */}
-        <Navbar />
-
+      <Navbar />
+      
+        
+ 
         {/* HERO WRAPPER - image beside hero (responsive) */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-20 mt-25">
         {/* HERO */}
